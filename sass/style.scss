@@ -28,6 +28,12 @@
   width: 100%;
   margin-top: -80px;
   color: #fff;
+  @media (max-width: 1280px) {
+    flex-direction: column;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: -320px;
+  }
 }
 
 /* navbar */
@@ -45,11 +51,44 @@
   justify-content: space-between;
   z-index: 2000;
   @media (max-width: 1280px) {
+    background-color: rgba(255, 165, 0, 0.3);
     flex-direction: column;
     text-align: center;
     margin: 0 auto;
+    &li {
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
   }
 }
+
+#navbar li {
+  // margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+// @media (max-width: 768px) {
+//   #navbar .container {
+//     max-width: 100%;
+//   }
+  
+// }
+
+// @media (max-width: 1280px) {
+//   #navbar .container {
+//     max-width: 100%;
+//   }
+// }
+// #navbar .container {
+//   @media (max-width: 768px) {
+//     max-width: 100%;
+//   }
+//   @media (max-width: 1280px) {
+//     width: 100%;
+//     padding: 0;
+//     max-width: 100%;
+//   }
+// }
 
 #navbar ul {
   display: flex;
@@ -98,11 +137,23 @@
 
 .services-column {
   padding-left: 40px;
+  
+  @media (max-width: 1280px) {
+    padding: 0;
+  }
 }
 .services-columns-wrapper {
   display: flex;
   text-align: center;
   padding-top: 40px;
+
+  @media (max-width: 1280px) {
+    flex-direction: column;
+  }
+}
+
+.services-h1-positioning {
+  text-align: center;
 }
 
 .fa-amazon,

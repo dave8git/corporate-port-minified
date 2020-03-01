@@ -30,7 +30,23 @@
   color: #fff;
 }
 
+@media (max-width: 1280px) {
+  #hero {
+    -ms-flex-direction: column;
+        flex-direction: column;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: -320px;
+  }
+}
+
 /* navbar */
+.logo {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 30px;
+  color: #FDCF33;
+}
+
 #navbar {
   display: -ms-flexbox;
   display: flex;
@@ -42,6 +58,24 @@
   z-index: 2000;
 }
 
+@media (max-width: 1280px) {
+  #navbar {
+    background-color: rgba(255, 165, 0, 0.3);
+    -ms-flex-direction: column;
+        flex-direction: column;
+    text-align: center;
+    margin: 0 auto;
+  }
+  #navbarli {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+#navbar li {
+  margin-bottom: 20px;
+}
+
 #navbar ul {
   display: -ms-flexbox;
   display: flex;
@@ -49,6 +83,14 @@
       align-items: center;
   list-style: none;
   margin-top: 20px;
+}
+
+@media (max-width: 1280px) {
+  #navbar ul {
+    -ms-flex-direction: column;
+        flex-direction: column;
+    padding: 0;
+  }
 }
 
 #navbar h1 {
@@ -92,11 +134,28 @@
   padding-left: 40px;
 }
 
+@media (max-width: 1280px) {
+  .services-column {
+    padding: 0;
+  }
+}
+
 .services-columns-wrapper {
   display: -ms-flexbox;
   display: flex;
   text-align: center;
   padding-top: 40px;
+}
+
+@media (max-width: 1280px) {
+  .services-columns-wrapper {
+    -ms-flex-direction: column;
+        flex-direction: column;
+  }
+}
+
+.services-h1-positioning {
+  text-align: center;
 }
 
 .fa-amazon,
@@ -164,6 +223,13 @@ img {
       justify-content: space-between;
 }
 
+@media (max-width: 1280px) {
+  .polaroid-items {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
 @media (max-width: 960px) {
   .polaroid-items {
     -ms-flex-direction: column;
@@ -182,6 +248,16 @@ img {
   /* background-image: url(https://images.pexels.com/photos/1793307/pexels-photo-1793307.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260); */
   -ms-flex-preferred-size: 30%;
       flex-basis: 30%;
+}
+
+@media (max-width: 1280px) {
+  .polaroid-item {
+    -ms-flex-preferred-size: 34%;
+        flex-basis: 34%;
+    max-width: 50%;
+    margin-bottom: 20px;
+    margin: 20px auto;
+  }
 }
 
 .polaroid-item-text {
