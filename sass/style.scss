@@ -33,49 +33,57 @@
   justify-content: space-between;
   z-index: 2000;
 
-  @media (max-width: 1280px) {
-      flex-direction: column;
-      text-align: center;
-      margin: 0 auto;
+  li {
+    margin-bottom: 20px;
+  }
 
-      ul li a {
+  ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin-top: 20px;
+
+    a {
+      color: #fff;
+      padding: .75rem;
+      margin: 0 .25rem;
+    }
+
+    @media (max-width: 1280px) {
+      flex-direction: column;
+      padding: 0;
+    }
+  }
+
+  h1 {
+    margin-top: 20px;
+  }
+
+  ul {
+    li {
+      a:hover {
+        background: #FDCF33;
+        border-radius: 5px;
+        text-decoration: none;
+      }
+    }
+  }
+
+  @media (max-width: 1280px) {
+    flex-direction: column;
+    text-align: center;
+    margin: 0 auto;
+
+    ul {
+      li {
+        a {
           padding-top: 20px;
           padding-bottom: 20px;
           color: black;
+        }
       }
+    }
   }
-}
-
-#navbar li {
-  margin-bottom: 20px;
-}
-
-#navbar ul {
-  display: flex;
-  align-items: center;
-  list-style: none;
-  margin-top: 20px;
-
-  @media (max-width: 1280px) {
-      flex-direction: column;
-      padding: 0;
-  }
-}
-
-#navbar h1 {
-  margin-top: 20px;
-}
-
-#navbar ul a {
-  color: #fff;
-  padding: .75rem;
-  margin: 0 .25rem;
-}
-
-#navbar ul li a:hover {
-  background: #FDCF33;
-  border-radius: 5px;
-  text-decoration: none;
 }
 
 /* header */
@@ -88,26 +96,26 @@
   color: #fff;
 
   @media (max-width: 1280px) {
-      position: relative;
-      flex-direction: column;
-      text-align: center;
-      margin: 0 auto;
+    position: relative;
+    flex-direction: column;
+    text-align: center;
+    margin: 0 auto;
 
-      // margin-top: -320px;
-      &::after {
-          content: "";
-          background-color: rgba(255, 165, 0, 0.3);
-          position: absolute;
-          width: 100%;
-          height: 100%;
-          top: 0;
-          right: 0;
-          left: 0;
-      }
+    // margin-top: -320px;
+    &::after {
+      content: "";
+      background-color: rgba(255, 165, 0, 0.3);
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      right: 0;
+      left: 0;
+    }
 
-      h1 {
-          font-size: .90rem;
-      }
+    h1 {
+      font-size: .90rem;
+    }
   }
 }
 
@@ -124,7 +132,7 @@
   align-items: center;
 
   @media (max-width: 1280px) {
-      padding: 60px 0;
+    padding: 60px 0;
   }
 }
 
@@ -139,7 +147,7 @@
   // padding-left: 40px;
 
   @media (max-width: 1280px) {
-      padding: 0;
+    padding: 0;
   }
 }
 
@@ -149,7 +157,7 @@
   padding-top: 40px;
 
   @media (max-width: 1280px) {
-      flex-direction: column;
+    flex-direction: column;
   }
 }
 
@@ -202,10 +210,10 @@ img {
   width: 100%;
   background: rgba(0, 0, 0, 0.1);
   text-align: center;
-}
 
-.gallery h1 {
-  margin-top: 40px;
+  h1 {
+    margin-top: 40px;
+  }
 }
 
 .polaroid-items {
@@ -215,33 +223,26 @@ img {
   justify-content: space-between;
 
   @media (max-width: 1280px) {
-      justify-content: space-around;
+    justify-content: space-around;
   }
 
   @media (max-width: 960px) {
-      flex-direction: column;
+    flex-direction: column;
   }
 }
-
 
 .polaroid-item {
   position: relative;
   background: white;
-  /* height: 420px; */
-  /* width: 295px; */
-  /* min-width: 30%; */
   margin-bottom: 30px;
-  /* border: solid 2px red; */
-  /* background-image: url(https://images.pexels.com/photos/1793307/pexels-photo-1793307.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260); */
   flex-basis: 30%;
 
   @media (max-width: 1280px) {
-      flex-basis: 34%;
-      margin-bottom: 20px;
-      margin: 20px auto;
+    flex-basis: 34%;
+    margin-bottom: 20px;
+    margin: 20px auto;
   }
 }
-
 
 .polaroid-item-text {
   position: absolute;
@@ -256,6 +257,14 @@ img {
 footer {
   display: flex;
   justify-content: center;
+
+  p {
+    transform: translateY(50%);
+
+    @media (max-width: 1280px) {
+      position: absolute;
+    }
+  }
 }
 
 .icon-background {
@@ -271,15 +280,7 @@ footer {
   background-color: #000;
 
   @media (max-width: 1280px) {
-      margin-top: 50px;
-  }
-}
-
-footer p {
-  transform: translateY(50%);
-  
-  @media (max-width: 1280px) {
-      position: absolute;
+    margin-top: 50px;
   }
 }
 
